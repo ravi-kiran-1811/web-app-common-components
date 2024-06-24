@@ -1,0 +1,46 @@
+.time {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17.07px;
+    text-align: left;
+    margin: 0px;
+}
+
+.place {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.07px;
+    text-align: left;
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dateAndPoint {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.07px;
+    text-align: left;
+    margin: 0px;
+}
+.datePoint{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.straightLine {
+    margin: 0px;
+}

@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.columnReverse {
+    flex-direction: row-reverse;
+}
+
+.text {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.63px;
+    color: #020202;
+    margin: 0;
+}

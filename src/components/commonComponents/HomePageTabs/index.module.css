@@ -1,0 +1,16 @@
+.tabs {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.label {
+    margin: 0px;
+}
+
+@media screen and (max-width: 599px) {
+    .tabs {
+        flex-direction: column;
+        gap: 4px;
+    }
+}

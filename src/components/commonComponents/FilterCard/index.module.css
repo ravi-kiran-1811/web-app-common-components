@@ -1,0 +1,37 @@
+.container {
+    border: 1px solid #D9D9D9;
+    width: fit-content;
+    padding: 14px 8px 5px 8px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    min-width: 57px;
+    cursor: pointer;
+}
+
+.selected {
+    border: 1px solid #CD342B;
+}
+
+.primary {
+    flex-direction: row;
+    gap: 7px;
+    padding: 12px 10px 12px 10px;
+    align-items: center;
+
+}
+
+.cardText {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.63px;
+    text-align: center;
+    margin: 0;
+}
+
+.imageContainer {
+    cursor: pointer;
+}
