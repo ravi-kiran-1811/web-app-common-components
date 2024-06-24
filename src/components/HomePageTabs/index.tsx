@@ -2,9 +2,7 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import clock from '../../../assets/clock.svg';
-import bus from '../../../assets/bus.svg';
-import ImageAndText from '../ImageAndText';
+
 import styles from './index.module.css'
 interface TabContent {
     label: string;

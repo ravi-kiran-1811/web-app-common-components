@@ -1,5 +1,5 @@
 .bookingPageHeader {
-    background-image: url('../../../assets/backgroundImage.png');
+    background-image: url('../../assets/backgroundImage.png');
     display: flex;
     justify-content: space-between;
     padding: 30px;

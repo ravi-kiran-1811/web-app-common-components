@@ -1,0 +1,22 @@
+.title {
+  color: var(--Dark-black, #020202);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.image {
+  width: 100%;
+  height: auto;
+}
+.paragraph {
+  color: var(--text-grey-body-text, #4d4d4d);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
