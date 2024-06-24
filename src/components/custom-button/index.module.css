@@ -1,0 +1,54 @@
+.font {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+}
+
+.primary {
+    color: #fff;
+    background-color: #11ad6b;
+    font-size: 14px;
+    /* remove */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 25px;
+    /* remove */
+    padding: 16px 40px 14px;
+    /* remove */
+}
+
+.primary:hover {
+    background-color: #11ad6b;
+}
+
+.secondary {
+    color: #020202;
+    background-color: #fff;
+    border: 0.5px solid #cbcbcb;
+    font-size: 12px;
+    /* remove */
+    font-weight: 400;
+    border-radius: 25px;
+    /* remove */
+    padding: 16px 40px 14px;
+    /* remove */
+}
+
+.ternary {
+    color: #11ad6b;
+    background-color: #fff;
+    border: 1px solid #11ad6b;
+    font-size: 12px;
+    border-radius: 25px;
+    /* remove */
+    padding: 16px 40px 14px;
+    /* remove */
+}
+
+.secondary:hover,
+.ternary:hover {
+    background-color: #fff;
+}

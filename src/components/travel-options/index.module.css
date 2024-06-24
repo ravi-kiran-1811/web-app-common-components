@@ -1,0 +1,42 @@
+.radioLabel {
+    margin: 0;
+    padding: 15px;
+    gap: 8px;
+    background-color: #fff;
+    border-radius: 25px;
+  }
+  .checked {
+    background-color: #e9fbf4;
+  }
+  .radioGroup {
+    gap: 35px;
+    display: flex;
+    flex-direction: row;
+  
+  }
+  .radioButton {
+    padding: 0px;
+    width: 16px;
+    height: 16px;
+    color: #11ad6b !important;
+  }
+  .root {
+    display: flex;
+    align-items: center;
+  }
+  .label {
+    display: flex;
+    align-items: center;
+  }
+  .icon {
+    margin-right: 8px;
+  }
+  .text {
+    color: var(--Dark-black, #020202);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  

@@ -1,0 +1,31 @@
+.formGroup{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.formControlLabel{
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat;
+    font-size: 14px;
+}
+.checkbox{
+    color: #B8B8B8;
+    padding: 0;
+    margin: 2px 7px 2px 5px;
+    width: 13px;
+    height: 13px;
+}
+.text{
+    color: #4D4D4D;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.highlightedText{
+    color: #11AD6B;
+    font-weight: 500;
+}
