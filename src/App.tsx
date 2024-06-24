@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import ReusableTextField from './textField/index';
-import ToastMessage from './toastMessage';
-import FinalBusDetails from './finalBusDetails';
-import Tabs from './tsx';
+import ReusableTextField from './components/textField/index';
+import ToastMessage from './components/toastMessage';
+import FinalBusDetails from './components/finalBusDetails';
 import Carousal from './carousal';
-import ImageWithText from './imageWithText';
-import ErrorToastMessage from './errorToastMessage';
+import ImageWithText from './components/imageWithText';
+import ErrorToastMessage from './components/errorToastMessage';
 import './App.css';
 import './global.css'
 import image2 from '../src/assets/busimage.svg';
@@ -142,11 +141,7 @@ const array: Person[] = [
   { name: "Jack", age: 30 },
 ];
 
-const [filteredArray, setFilteredArray] = useState<Person[]>(array);
-const handleFilter = (filteredArray: Person[]) => {
-  setFilteredArray(filteredArray);
-  console.log(filteredArray);
-};
+
 
 const amenitiesArray = [
   { name: 'seater', notSelected: image1, selected: image2 },
@@ -154,21 +149,7 @@ const amenitiesArray = [
   { name: 'hello', notSelected: image1, selected: image2 },
 ];
 
-const [selectedStates, setSelectedStates] = useState<boolean[]>(new Array(amenitiesArray.length).fill(false));
 
-const onClick = (index: number) => {
-  setSelectedStates(prevState => prevState.map((selected, i) => i === index ? !selected : selected));
-};
-const [activeStep, setActiveStep] = useState(0);
-const steps = ['Seat Selection', 'Passenger Details', 'Payment'];
-
-const handleNext = () => {
-  setActiveStep((prevActiveStep) => prevActiveStep + 1);
-};
-
-const handleBack = () => {
-  setActiveStep((prevActiveStep) => prevActiveStep - 1);
-};
 const items = [
   { name: 'Below Rs. 1000', price: 1000 },
   { name: 'Item 1', price: 10 },
@@ -176,10 +157,7 @@ const items = [
   { name: 'Item 3', price: 30 },
 ];
 
-const [sortedItems, setSortedItems] = useState(items);
-const handleFilterChange = (price: number) => {
-  console.log(price)
-};
+
 const routes = [
   { from: 'Hyderabad', to: 'Warangal' },
   { from: 'Hyderabad', to: 'Vijayawada' },
@@ -190,12 +168,7 @@ const tabContents = [
   { label: 'Item Two', imageUrl: clock, activeImageUrl: bus, content: <p>Content for Item Two</p> },
   { label: 'Item Three', imageUrl: clock, activeImageUrl: bus, content: <p>Content for Item Three</p> },
 ];
-const [selectedFrom, setSelectedFrom] = useState("");
-const [selectedTo, setSelectedTo] = useState("");
-const handleRouteSelect = (from: string, to: string) => {
-  setSelectedFrom(from);
-  setSelectedTo(to);
-};
+
 const arrayInfo = [
   {
     "type": "heading",
@@ -273,11 +246,39 @@ const components = [
 
 const App: React.FC = () => {
   const [formData, setFormData] = useState<{ [key: string]: string }>({});
-
+  const [filteredArray, setFilteredArray] = useState<Person[]>(array);
+  const handleFilter = (filteredArray: Person[]) => {
+    setFilteredArray(filteredArray);
+    console.log(filteredArray);
+  };
+  const [sortedItems, setSortedItems] = useState(items);
+  const handleFilterChange = (price: number) => {
+    console.log(price)
+  };
+  const [selectedFrom, setSelectedFrom] = useState("");
+  const [selectedTo, setSelectedTo] = useState("");
+  const handleRouteSelect = (from: string, to: string) => {
+    setSelectedFrom(from);
+    setSelectedTo(to);
+  };
   const handleFieldChange = (id: string, value: string) => {
     setFormData(prevState => ({ ...prevState, [id]: value }));
   };
+  const [selectedStates, setSelectedStates] = useState<boolean[]>(new Array(amenitiesArray.length).fill(false));
 
+  const onClick = (index: number) => {
+    setSelectedStates(prevState => prevState.map((selected, i) => i === index ? !selected : selected));
+  };
+  const [activeStep, setActiveStep] = useState(0);
+  const steps = ['Seat Selection', 'Passenger Details', 'Payment'];
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
   return (
     <div>
       <div>
@@ -301,8 +302,6 @@ const App: React.FC = () => {
       <ToastMessage />
 
       <FinalBusDetails busDetails={busDetails} />
-
-      <Tabs />
 
       <ErrorToastMessage
         imageSrc={errorToastMessageData.imageSrc}

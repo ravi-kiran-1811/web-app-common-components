@@ -1,12 +1,13 @@
 .successToast {
-  background-image: url(../../public/success-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  height: 120px;
-  align-items: center;
-  justify-content: center;
+    background-image: url(../../assets/success-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
 }
+
 .successText {
     color: var(--White, #FFF);
     font-family: Montserrat;
@@ -16,11 +17,13 @@
     line-height: normal;
     margin-right: 13px;
 }
-.tick{
+
+.tick {
     width: 42px;
     height: 42px;
     margin-right: 9px;
 }
-.tickImage{
+
+.tickImage {
     width: 100%;
 }
