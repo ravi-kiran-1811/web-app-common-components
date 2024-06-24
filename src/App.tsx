@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReusableTextField from './components/textField/index';
 import ToastMessage from './components/toastMessage';
 import FinalBusDetails from './components/finalBusDetails';
-import Carousal from './carousal';
+import Carousal from './components/carousal';
 import ImageWithText from './components/imageWithText';
 import ErrorToastMessage from './components/errorToastMessage';
 import './App.css';
