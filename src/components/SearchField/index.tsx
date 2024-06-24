@@ -1,6 +1,6 @@
 import React from 'react';
 import { TextField, InputAdornment } from '@mui/material';
-import search from '../../../assets/searchIcon.svg'
+import search from '../../assets/searchIcon.svg'
 import styles from './index.module.css'
 import FilterCardHeadingText from '../FilterCardHeading';
 

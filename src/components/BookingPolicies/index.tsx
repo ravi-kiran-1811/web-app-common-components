@@ -1,7 +1,7 @@
 import React from "react";
 import FilterCardHeadingText from "../FilterCardHeading";
 import BulletPoints from "../BulletPoints";
-import Tables from "../Tables";
+import Tables from "../Tables/index";
 import styles from './index.module.css'
 type typeOfTheObject = "link" | "heading" | "bullet points" | "table" | "note";
 

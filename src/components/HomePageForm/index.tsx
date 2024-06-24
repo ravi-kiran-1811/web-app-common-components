@@ -8,9 +8,9 @@ import {
     Box,
     Button,
 } from "@mui/material";
-import icons2 from '../../../assets/icons-2.svg';
-import date from '../../../assets/date-icon.svg';
-import excange from '../../../assets/exchange.svg';
+import icons2 from '../../assets/icons-2.svg';
+import date from '../../assets/date-icon.svg';
+import excange from '../../assets/exchange.svg';
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import {
     LocalizationProvider,

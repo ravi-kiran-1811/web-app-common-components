@@ -1,7 +1,7 @@
 import React from 'react';
-import bus from '../../../assets/bus.svg';
-import road from '../../../assets/road.svg';
-import tick from '../../../assets/tickMark.svg';
+import bus from '../../assets/bus.svg';
+import road from '../../assets/road.svg';
+import tick from '../../assets/tickMark.svg';
 import styles from './index.module.css';
 
 interface CustomStepperProps {

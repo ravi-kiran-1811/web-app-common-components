@@ -2,7 +2,7 @@ import React from 'react';
 import ArraivalDeparture from '../ArraivalDeparture';
 import styles from './index.module.css'
 import MainHeading from '../MainHeading';
-import divider from '../../../assets/tripSummaryCardDivider.svg'
+import divider from '../../assets/tripSummaryCardDivider.svg'
 import FilterCardHeadingText from '../FilterCardHeading';
 interface TripSummaryCardProps {
     busName: string;

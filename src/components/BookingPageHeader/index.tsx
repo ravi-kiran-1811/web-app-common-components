@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './index.module.css';
-import HomePageForm from '../HomePageForm';
+import HomePageForm from '../HomePageForm/index';
 
 const BookingPageHeader: React.FC = () => {
     return (
@@ -9,9 +9,9 @@ const BookingPageHeader: React.FC = () => {
                 <button className="button">Button</button>
             </div>
             <div className="right-section">
-              <HomePageForm routes={[]} onRouteSelect={function (from: string, to: string): void {
+                <HomePageForm routes={[]} onRouteSelect={function (from: string, to: string): void {
                     throw new Error('Function not implemented.');
-                } } selectedTo={''} selectedFrom={''} />
+                }} selectedTo={''} selectedFrom={''} />
             </div>
         </div>
     );

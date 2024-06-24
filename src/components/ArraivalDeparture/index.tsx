@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './index.module.css'
 import ArrivalDepartureDatePlace from '../ArrivalDepartureDatePlace';
-import clock from '../../../assets/clock.svg';
-import arrow from '../../../assets/arrow.png'
+import clock from '../../assets/clock.svg';
+import arrow from '../../assets/arrow.png'
 interface Props {
     departureTime: string;
     arrivalTime: string;

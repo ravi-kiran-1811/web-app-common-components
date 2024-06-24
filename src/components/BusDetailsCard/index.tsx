@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import busLogo from '../../../assets/busLogo.svg';
 import styles from './index.module.css';
 import ArraivalDeparture from '../ArraivalDeparture';
-import ImageAndText from '../ImageAndText';
-import downArrow from '../../../assets/downArrow.svg';
+import ImageAndText from '../ImageAndText/index';
+import downArrow from '../../assets/downArrow.svg';
 import FilterCard from '../FilterCard';
 import FilterCardHeadingText from '../FilterCardHeading';
-import SearchField from '../SearchField';
+import SearchField from '../SearchField/index';
 
 interface BusDetailsCardProps {
     busLogo: string;
