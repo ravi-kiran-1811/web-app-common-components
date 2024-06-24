@@ -1,0 +1,15 @@
+.label, .dateTime, .text {
+    color: var(--Dark-black, #020202);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: start;
+  }
+  
+.dateTime, .text {
+    font-size: 14px;
+    font-weight: 500;
+  }

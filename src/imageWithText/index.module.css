@@ -1,0 +1,13 @@
+.imageWithText {
+  position: relative;
+}
+
+.imageWithTextImage {
+  width: 100%;
+}
+
+.imageWithTextParagraph {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
