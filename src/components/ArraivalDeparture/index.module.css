@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.commonClass {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.63px;
+    text-align: left;
+    margin: 0px;
+    color: #4D4D4D;
+}
+
+.innerContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.timeTaken {
+    display: flex;
+    gap: 3px;
+}

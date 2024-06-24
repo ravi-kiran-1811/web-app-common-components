@@ -1,0 +1,27 @@
+.below1000,
+.menuItem {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.07px;
+    text-align: left;
+}
+
+.heading {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: left;
+    margin: 0px;
+}
+
+.text {
+    text-align: left;
+}
+
+.MainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

@@ -1,0 +1,51 @@
+.stepper {
+    background: transparent;
+    padding: 0;
+}
+
+.stepLabel {
+    color: #000;
+}
+
+.stepLabel.completed {
+    color: green;
+}
+
+.stepIcon {
+    color: #000;
+}
+
+.stepIcon.completed {
+    color: green;
+}
+
+.container {
+    background-repeat: repeat-x;
+    height: 8px;
+    position: relative;
+    max-width: 1000px;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.step {
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.stepTextItem {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17.07px;
+    text-align: left;
+
+}
+
+.stepText {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    margin-top: 12px;
+    width: 100%;
+}
