@@ -22,6 +22,13 @@ import bus from './assets/bus.svg';
 import busLogo from './assets/busLogo.svg'
 import BookingPolicies from './components/BookingPolicies';
 import BookingPageHeader from './components/BookingPageHeader';
+import CustomButton from './components/custom-button';
+import Tooltip from './components/tooltip';
+import ConfirmationCard from './components/confirmation-card';
+import CheckboxLabel from './components/checkbox-label';
+import TravelOptions from './components/travel-options';
+import BannerTitleSubTitle from './components/banner-heading-subheading';
+import TourismCard from './components/tourism-card';
 interface Person {
   name: string;
   age: number;
@@ -175,57 +182,67 @@ function App() {
     }
   ]
   return (
-    <div className="App">
-      <button onClick={handleNext}>next</button>
-      <button onClick={handleBack}>back</button>
-      {amenitiesArray.map((amenity, index) => (
-        <FilterCard
-          primary={false}
-          key={index}
-          selected={selectedStates[index]}
-          onClick={() => onClick(index)}
-          name={amenity.name}
-          notSelectedImage={amenity.notSelected}
-          selectedImage={amenity.selected}
-          classNameContainer="container"
+    <>
+      <div className="App">
+        <button onClick={handleNext}>next</button>
+        <button onClick={handleBack}>back</button>
+        {amenitiesArray.map((amenity, index) => (
+          <FilterCard
+            primary={false}
+            key={index}
+            selected={selectedStates[index]}
+            onClick={() => onClick(index)}
+            name={amenity.name}
+            notSelectedImage={amenity.notSelected}
+            selectedImage={amenity.selected}
+            classNameContainer="container"
+          />
+
+        ))}
+        {amenitiesArray.map((amenity, index) => (
+          <ImageAndText key={index} imageUrl={amenity.notSelected} text={amenity.name} />
+        ))}
+
+        <MainHeadingPlayFairDisplay heading="Hello" />
+        <FilterCardHeadingText heading="Hello" />
+        <SearchField placeholder={'Search'} />
+        <ArraivalDeparture departureTime={'19:20'} arrivalTime={'20:20'} departurePlace={'Hyderabad'} arrivalPlace={'Warangal'} timeTaken={'07:20'} via={'RFC'} serviceNo={'7890'} />
+        <BusDetailsCard busNumber={'7890'} busType={'Luxury'} departureTime={'19:20'} arrivalTime={'20:20'} departurePlace={'Hyderabad'} arrivalPlace={'Warangal'} timeTaken={'07:20'} via={'RFC'} serviceNo={'7890'} seatsAvailable={0} windowSeatsAvailable={0} price={'$251'} busLogo={busLogo} />
+        <TripSummaryCard
+          busName={'Bus A1'}
+          seatsAvailable={30}
+          windowSeats={10}
+          departureTime={'08:00 AM'}
+          arrivalTime={'12:00 PM'}
+          departurePlace={'City A'}
+          arrivalPlace={'City B'}
+          timeTaken={'4 hours'}
+          via={'Town C'}
+          serviceNo={'1234'}
         />
+        <BoardingDroppingSwitch tab1Content={<BusStepper
+          activeStep={activeStep}
+          steps={steps}
+        />} tab2Content={<BoardingAndDroppingStations data={data} />} tab1Title={'Boarding Point'} tab2Title={'Dropping Point'} />
 
-      ))}
-      {amenitiesArray.map((amenity, index) => (
-        <ImageAndText key={index} imageUrl={amenity.notSelected} text={amenity.name} />
-      ))}
+        <MuiSelect items={items} onChange={handleFilterChange} />
+        <HomePageForm routes={routes}
+          onRouteSelect={handleRouteSelect}
+          selectedFrom={selectedFrom}
+          selectedTo={selectedTo} />
+        <BasicTabs tabContents={tabContents} />
+        <BookingPolicies array={arrayInfo} />
+        <BookingPageHeader />
 
-      <MainHeadingPlayFairDisplay heading="Hello" />
-      <FilterCardHeadingText heading="Hello" />
-      <SearchField placeholder={'Search'} />
-      <ArraivalDeparture departureTime={'19:20'} arrivalTime={'20:20'} departurePlace={'Hyderabad'} arrivalPlace={'Warangal'} timeTaken={'07:20'} via={'RFC'} serviceNo={'7890'} />
-      <BusDetailsCard busNumber={'7890'} busType={'Luxury'} departureTime={'19:20'} arrivalTime={'20:20'} departurePlace={'Hyderabad'} arrivalPlace={'Warangal'} timeTaken={'07:20'} via={'RFC'} serviceNo={'7890'} seatsAvailable={0} windowSeatsAvailable={0} price={'$251'} busLogo={busLogo} />
-      <TripSummaryCard
-        busName={'Bus A1'}
-        seatsAvailable={30}
-        windowSeats={10}
-        departureTime={'08:00 AM'}
-        arrivalTime={'12:00 PM'}
-        departurePlace={'City A'}
-        arrivalPlace={'City B'}
-        timeTaken={'4 hours'}
-        via={'Town C'}
-        serviceNo={'1234'}
-      />
-      <BoardingDroppingSwitch tab1Content={<BusStepper
-        activeStep={activeStep}
-        steps={steps}
-      />} tab2Content={<BoardingAndDroppingStations data={data} />} tab1Title={'Boarding Point'} tab2Title={'Dropping Point'} />
-
-      <MuiSelect items={items} onChange={handleFilterChange} />
-      <HomePageForm routes={routes}
-        onRouteSelect={handleRouteSelect}
-        selectedFrom={selectedFrom}
-        selectedTo={selectedTo} />
-      <BasicTabs tabContents={tabContents} />
-      <BookingPolicies array={arrayInfo} />
-      <BookingPageHeader />
-    </div>
+      </div>
+      <CustomButton text="Hello" isPrimary={true} />
+      <Tooltip tooltip={'View Details'} tooltipText={'Routes a , b, c'} />
+      <ConfirmationCard seatText={'asdg'} seatNumber={'dfgjh'} amountText={'hghkj'} amount={'ghjjklk'} text={'ghjkj'} />
+      <CheckboxLabel text={'Hello'} />
+      <TravelOptions />
+      <BannerTitleSubTitle heading='hgvcdjhcjh' subHeading='cvhscjsbj' />
+      <TourismCard placeName={'Hyderabad'} image={''} pickupTime={'8:30pm'} pickupPoint={'Alpha'} placesCovered={'gsdgchjs'} places={["a", "b", "c"]} button={'Book Now'} />
+    </>
   );
 }
 

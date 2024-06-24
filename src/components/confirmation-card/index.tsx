@@ -1,5 +1,6 @@
 import * as React from "react";
 import styles from "./index.module.css";
+import CustomButton from "../custom-button";
 
 interface ConfirmationProps {
   seatText: string;

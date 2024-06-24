@@ -1,8 +1,9 @@
-import type { NextPage } from "next";
 import styles from "./index.module.css";
-import Button from '../button';
-import { UPLOADS_BASE_URL } from "../../services/service";
 import { useEffect, useRef } from 'react';
+import CustomButton from "../custom-button";
+import tourismCard from '../../assets/tourism-card.png'
+import calenderIcon from '../../assets/calender-icon.svg'
+import pickUpIcon from '../../assets//pickup-bus-icon.svg'
 
 export type TourismCardType = {
   placeName: string;
@@ -14,8 +15,8 @@ export type TourismCardType = {
   button: string;
 };
 
-const TourismCard: NextPage<TourismCardType> = ({placeName,image,pickupPoint,pickupTime,placesCovered, places,button}) => {
-  
+const TourismCard: React.FC<TourismCardType> = ({ placeName, image, pickupPoint, pickupTime, placesCovered, places, button }) => {
+
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -45,7 +46,7 @@ const TourismCard: NextPage<TourismCardType> = ({placeName,image,pickupPoint,pic
             className={styles.picturesIcon}
             loading="lazy"
             alt="tourism-card-image"
-            src={UPLOADS_BASE_URL+image}
+            src={tourismCard}
           />
         </div>
       </div>
@@ -57,7 +58,7 @@ const TourismCard: NextPage<TourismCardType> = ({placeName,image,pickupPoint,pic
                 className={styles.calenderIcon}
                 loading="lazy"
                 alt="calender-icon"
-                src="/calender-icon.svg"
+                src={calenderIcon}
               />
               <div className={styles.tourismTime}>{pickupTime}</div>
             </div>
@@ -66,7 +67,7 @@ const TourismCard: NextPage<TourismCardType> = ({placeName,image,pickupPoint,pic
                 className={styles.pickupBusIcon}
                 loading="lazy"
                 alt="pickup-bus-icon"
-                src="/pickup-bus-icon.svg"
+                src={pickUpIcon}
               />
               <div className={styles.tourismPickup}>{pickupPoint}</div>
             </div>
@@ -76,18 +77,18 @@ const TourismCard: NextPage<TourismCardType> = ({placeName,image,pickupPoint,pic
             <div className={styles.placesCovered}>{placesCovered}</div>
             <div className={styles.chipsAndText}>
               <div className={styles.chips}>
-                {places.map((place,index:number) => (
+                {places.map((place, index: number) => (
                   <span key={index} className={styles.place}>
                     <span>{place}</span>
                     <span className={styles.separator}>|</span>
-                  </span> 
+                  </span>
                 ))}
               </div>
             </div>
           </div>
         </div>
         <div className={styles.buttonSection}>
-          <Button text={button} className={styles.button} textClassName={styles.bookNow} />
+          <CustomButton text={button} className={styles.button} />
         </div>
       </div>
     </div>
