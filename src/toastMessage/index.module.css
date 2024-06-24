@@ -1,0 +1,26 @@
+.successToast {
+  background-image: url(../../public/success-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+}
+.successText {
+    color: var(--White, #FFF);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 13px;
+}
+.tick{
+    width: 42px;
+    height: 42px;
+    margin-right: 9px;
+}
+.tickImage{
+    width: 100%;
+}
