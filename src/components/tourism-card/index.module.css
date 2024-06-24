@@ -1,0 +1,199 @@
+.tourismCard,
+.tourismCardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.tourismCard {
+  width: 560px;
+  margin: 0 !important;
+  box-shadow: var(--table-shadow);
+  border-radius: var(--br-base);
+  background-color: var(--support-white);
+  align-items: flex-start;
+  padding: var(--padding-21xl);
+  box-sizing: border-box;
+  gap: var(--gap-5xl);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--primary-red);
+  font-family: var(--font-playfair-display);
+}
+.tourisamPlace {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
+  mix-blend-mode: normal;
+}
+.imagePlaceholder,
+.imageText {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.imageText {
+  gap: var(--gap-5xl);
+}
+.imagePlaceholder {
+  height: 200px;
+  border-radius: var(--br-5xs);
+  flex-shrink: 0;
+}
+.picturesIcon {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.tourismCardContent {
+  align-self: stretch;
+  align-items: flex-end;
+  gap: 16px;
+  font-size: var(--font-size-sm);
+  color: var(--text-black);
+  font-family: var(--font-montserrat);
+  height: 100%;
+  justify-content: space-between;
+}
+.chipsAndText,
+.description,
+.contents {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.chipsAndText{
+  gap: var(--gap-xs);
+}
+.contents {
+  justify-content: center;
+}
+.timePlace,
+.pickup {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.timePlace {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-7xs);
+}
+.calendar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.calenderIcon ,
+.pickupBusIcon {
+  height: 20px;
+  width: 20px;
+  margin-top: 3px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.tourismTime ,
+.tourismPickup{
+  line-height: 26px;
+  mix-blend-mode: normal;
+}
+.placesCovered {
+  line-height: 26px;
+  mix-blend-mode: normal;
+  font-weight: 600;
+}
+.chips{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  gap: var(--gap-5xs);
+}
+.place{
+  gap: var(--gap-5xs);
+  display: flex;
+}
+.place:last-child .separator:last-child{
+  display: none;
+}
+.lineSeparator{
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: #CBCBCB;
+  margin: 15px 0;
+}
+.buttonSection{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-4xs) var(--padding-5xl) var(--padding-3xs) !important;
+  background-color: transparent;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: var(--br-381xl) !important;
+  background: linear-gradient(90deg, #19ac58, #077f3b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.bookNow {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  font-family: var(--font-montserrat);
+  color: var(--support-white);
+  text-align: center;
+  text-transform: capitalize !important;
+  line-height: 17px !important;
+}
+
+@media screen and (max-width: 1170px) and (min-width:900px) {
+  .tourismCard {
+    width: 45vw;
+    padding: var(--padding-11xl);
+  }
+  .tourisamPlace {
+    font-size: var(--font-size-3xl);
+  }
+}
+@media screen and (max-width: 900px) {
+  .tourismCard {
+    padding: var(--padding-11xl);
+  }
+  .imageText {
+    gap: var(--gap-base);
+  }
+  .tourismCardContent{
+    gap: var(--gap-5xl);
+  }
+  .button{
+    width: 100%;
+  }
+  .imagePlaceholder {
+    height: auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  .tourismCard {
+    padding: var(--padding-base);
+  }
+  .tourisamPlace {
+    font-size: var(--font-size-xl);
+  }
+}
